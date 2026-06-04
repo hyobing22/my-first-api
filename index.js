@@ -17,7 +17,7 @@ const messages = [
   "당신은 완전 멋있습니다. 너무 멋져서 침이 나와요..................",
   "내가 조아하는 마라탕 재료 : 푸주, 목이버섯, 팽이버섯, 납작당면, 옥수수면, 땅콩소스 많이",
   "오늘 배운 것 : 시멘틱 태그 : section article nav 등등... div쓰지 말고 시멘틱 태그로 써라",
-  "오늘 배운 것 : 시멘틱 태그 : nav 안에 suvNav 만들기.. <ul class="gnb"><il><a href"#"><ul class="lnb"><il><a href"#"></a></li></ul></a></li></ul>",
+  "오늘 배운 것 : nav 안에 suvNav 만들기.. a 밑에 ul 생성 <ul class="gnb"><il><a href"#"><ul class="lnb"><il><a href"#"></a></li></ul></a></li></ul>",
   "언제나 당신의 편이 되어줄 사람이 있다는 걸 잊지 마세요!",
   "당신은 이미 최강입니다. goat.",
   "당신은 충분히 잘하고 있습니다!",
