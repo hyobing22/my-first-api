@@ -26,6 +26,7 @@ const messages = [
   "당신은 충분히 잘하고 있습니다!",
   "얍!! 응원 버프 걸어드릴게요🤩",
   "hello my friend! my name is hyobing23. im from korea. my favorite food is kimchi. just like common korean.. ㅎㅎ And i hate oyster. :( i really hate that. if you want to have dinner with me? don't suggest menu include oyster! have a nice day~",
+  "i have turtle neck.. zz my neck is broken. take me to the hospital"
 ];
 
 // API 엔드포인트 설정
