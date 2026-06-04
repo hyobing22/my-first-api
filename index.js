@@ -29,11 +29,32 @@ const messages = [
   "i have turtle neck.. zz my neck is broken. take me to the hospital"
 ];
 
+// 배열을 무작위로 섞는 함수 (Fisher-Yates 셔플)
+function shuffle(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// 최초로 무작위 섞인 메시지 배열 생성
+let shuffledMessages = shuffle(messages);
+
 // API 엔드포인트 설정
 app.get('/', (req, res) => {
-  const randomIndex = Math.floor(Math.random() * messages.length);
+  // 만약 모든 메시지를 다 꺼내서 썼다면, 다시 새로 섞어서 채워넣기
+  if (shuffledMessages.length === 0) {
+    shuffledMessages = shuffle(messages);
+    console.log("모든 메시지를 소진하여 새로 섞었습니다!");
+  }
+
+  // pop()을 사용해 배열의 맨 뒤 요소를 하나씩 제거하며 가져옴 (중복 방지)
+  const selectedMessage = shuffledMessages.pop();
+
   res.json({
-    message: messages[randomIndex],
+    message: selectedMessage,
     status: "success",
     timestamp: new Date().toISOString()
   });
